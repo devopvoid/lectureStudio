@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'temurin'
+          distribution: 'semeru'
 
       - name: Install the Apple certificate
         if: runner.os == 'macOS'
