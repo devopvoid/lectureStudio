@@ -34,7 +34,7 @@ jobs:
           sudo apt install -y openjdk-21-jdk
           sudo rm -rf /usr/lib/jvm/temurin-*
           echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
-          export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH
+          echo "PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH" >> $GITHUB_ENV
           sudo update-alternatives --list java
 
       - name: Install the Apple certificate
