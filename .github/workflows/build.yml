@@ -35,6 +35,11 @@ jobs:
           sudo rm -rf /usr/lib/jvm/temurin-*
           echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
           echo "PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH" >> $GITHUB_ENV
+          sudo update-alternatives --auto java
+          sudo update-alternatives --auto javac
+          sudo update-alternatives --auto jdeps
+          sudo update-alternatives --auto jlink
+          sudo update-alternatives --auto jpackage
           sudo update-alternatives --list java
           sudo update-alternatives --list jdeps
           sudo update-alternatives --list jlink
