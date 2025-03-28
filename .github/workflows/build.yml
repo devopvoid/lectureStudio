@@ -30,8 +30,7 @@ jobs:
         if: runner.os == 'linux'
         run: |
           sudo apt install -y openjdk-21-jdk
-          sudo update-alternatives --auto java
-          echo "$JAVA_HOME"
+          echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
 
       - name: Install the Apple certificate
         if: runner.os == 'macOS'
