@@ -29,7 +29,9 @@ jobs:
         shell: bash
         if: runner.os == 'linux'
         run: |
-          sudo apt install -y openjdk-21-jdk-headless
+          sudo apt update
+          sudo apt upgrade -y
+          sudo apt install -y openjdk-21-jdk
           echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
 
       - name: Install the Apple certificate
