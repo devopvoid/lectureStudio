@@ -34,6 +34,7 @@ jobs:
           sudo apt install -y openjdk-21-jdk
           echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
           export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH
+          sudo update-alternatives --list java
 
       - name: Install the Apple certificate
         if: runner.os == 'macOS'
