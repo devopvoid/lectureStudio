@@ -36,6 +36,8 @@ jobs:
           echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
           echo "PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH" >> $GITHUB_ENV
           sudo update-alternatives --list java
+          sudo update-alternatives --list jdeps
+          sudo update-alternatives --list jlink
 
       - name: Install the Apple certificate
         if: runner.os == 'macOS'
